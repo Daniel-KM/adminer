@@ -1,0 +1,73 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "cb52893b2af67fa2ac650ee5114fc896",
+    "packages": [
+        {
+            "name": "vrana/jsshrink",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vrana/JsShrink.git",
+                "reference": "master"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://codeload.github.com/vrana/JsShrink/zip/master",
+                "reference": "master"
+            },
+            "type": "library"
+        },
+        {
+            "name": "vrana/jush",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vrana/jush.git",
+                "reference": "6f4e94d7660f1d610347e3b7871b0617d1cf5557"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vrana/jush/zipball/6f4e94d7660f1d610347e3b7871b0617d1cf5557",
+                "reference": "6f4e94d7660f1d610347e3b7871b0617d1cf5557",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0",
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Vrána",
+                    "homepage": "https://www.vrana.cz/"
+                }
+            ],
+            "description": "JUSH - JavaScript Syntax Highlighter",
+            "homepage": "http://jush.sourceforge.net/",
+            "keywords": [
+                "Syntax highlighter",
+                "javascript"
+            ],
+            "support": {
+                "source": "https://github.com/vrana/jush/"
+            },
+            "time": "2018-03-02T08:41:11+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "vrana/jsshrink": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

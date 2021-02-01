@@ -26,6 +26,35 @@
         "GPL-2.0-only"
     ],
     "scripts": {
-        "compile": "php compile.php"
+        "compile": "php compile.php",
+        "post-install-cmd": "@build",
+        "post-update-cmd": "@build",
+        "build": [
+            "cp -r vendor/vrana/jush externals",
+            "cp -R vendor/vrana/jsshrink/* externals/JsShrink/"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "vrana/jsshrink",
+                "version": "master",
+                "source": {
+                    "url": "https://github.com/vrana/JsShrink.git",
+                    "type": "git",
+                    "reference":"master"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://codeload.github.com/vrana/JsShrink/zip/master",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "vrana/jush": "^2.0",
+        "vrana/jsshrink": "dev-master"
     }
 }
