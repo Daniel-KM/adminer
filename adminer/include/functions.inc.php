@@ -1115,7 +1115,7 @@ function dump_headers($identifier, $multi_table = false) {
 	$return = $adminer->dumpHeaders($identifier, $multi_table);
 	$output = $_POST["output"];
 	if ($output != "text") {
-		header("Content-Disposition: attachment; filename=" . $adminer->dumpFilename($identifier) . ".$return" . ($output != "file" && !preg_match('~[^0-9a-z]~', $output) ? ".$output" : ""));
+		header("Content-Disposition: attachment; filename=" . $adminer->dumpFilename($identifier) . ".$return" . ($output != "file" && preg_match('~^[0-9a-z]+$~', $output) ? ".$output" : ""));
 	}
 	session_write_close();
 	ob_flush();
@@ -1129,7 +1129,7 @@ function dump_headers($identifier, $multi_table = false) {
 */
 function dump_csv($row) {
 	foreach ($row as $key => $val) {
-		if (preg_match("~[\"\n,;\t]~", $val) || $val === "") {
+		if (preg_match('~["\n,;\t]|^0|\.\d*0$~', $val) || $val === "") {
 			$row[$key] = '"' . str_replace('"', '""', $val) . '"';
 		}
 	}
