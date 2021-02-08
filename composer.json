@@ -41,7 +41,7 @@
                 "name": "vrana/jsshrink",
                 "version": "master",
                 "source": {
-                    "url": "https://github.com/vrana/JsShrink.git",
+                    "url": "https://github.com/vrana/JsShrink",
                     "type": "git",
                     "reference":"master"
                 },
